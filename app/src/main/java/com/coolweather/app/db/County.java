@@ -1,13 +1,15 @@
-package com.coolweather.app.model;
+package com.coolweather.app.db;
+
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by Admin on 2017/1/2 0002.
  */
 
-public class County {
+public class County extends DataSupport {
     private int id;
     private String countyName;
-    private String countyCode;
+    private String weatherId;
     private int cityId;
 
     public int getId() {
@@ -26,12 +28,12 @@ public class County {
         this.countyName = countyName;
     }
 
-    public String getCountyCode() {
-        return countyCode;
+    public String getWeatherId() {
+        return weatherId;
     }
 
-    public void setCountyCode(String countyCode) {
-        this.countyCode = countyCode;
+    public void setWeatherId(String weatherId) {
+        this.weatherId = weatherId;
     }
 
     public int getCityId() {
